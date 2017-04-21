@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PANTHEON</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="https://npmcdn.com/aframe-href-component@0.5.1"></script>
+    <script src="components/set-image.js"></script>
+    <link rel="stylesheet" href="/stylesheet.css">
+  </head>
+  
+   <body>
+    <a-scene>
+      <a-assets>
+        <img id="gracepanel" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FGRACE.png?1492720496514">
+        <img id="brucepanel" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FBRUCE.png?1492720500019">
+        <img id="natepanel" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FNATE.png?1492720495618">
+
+      
+        <!-- Image link template to be reused. -->
+        <script id="link" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane"
+            material="shader: flat; src: #cubes-thumb"
+            event-set__1="_event: mousedown; scale: 1 1 1"
+            event-set__2="_event: mouseup; scale: 20 20 1"
+            event-set__3="_event: mouseenter; scale: 20 20 1"
+            event-set__4="_event: mouseleave; scale: 1 1 1"
+            sound="on: click; src: #click-sound">
+          </a-entity>
+        </script>
+      </a-assets>
+      
+       <a-entity class="link">
+        <a-image
+          src="#gracepanel"
+          href="./grace.html"
+          event-set__1="_event: mousedown; scale: 0.05 0.05 0.05;" 
+          event-set__2="_event: mouseup; scale: .055 .055 .055" 
+          event-set__3="_event: mouseenter; scale: 0.055 0.055 0.055" 
+          event-set__4="_event: mouseleave; rotation: 0 0 0"
+          sound="on: click; src: #click-sound"
+          width="92"
+          height="165.75" 
+          position="0 0 -6.7" 
+          rotation="0 0 0" 
+          scale=".05 .05 .05">
+          </a-image>
+         <a-image
+          src="#brucepanel"
+          href="./bruce.html"
+          event-set__1="_event: mousedown; scale: 0.05 0.05 0.05;" 
+          event-set__2="_event: mouseup; scale: .055 .055 .055" 
+          event-set__3="_event: mouseenter; scale: 0.055 0.055 0.055;" 
+          event-set__4="_event: mouseleave; scale: 0.05 0.05 0.05;"
+          sound="on: click; src: #click-sound"
+          width="92"
+          height="165.75" 
+          position="5.2 0 -5.5" 
+          rotation="0 -45 0" 
+          scale=".05 .05 .05">
+          </a-image>
+         <a-image
+          src="#natepanel"
+          href="./nate.html"
+          event-set__1="_event: mousedown; scale: 0.05 0.05 0.05;" 
+          event-set__2="_event: mouseup; scale: .055 .055 .055" 
+          event-set__3="_event: mouseenter; scale: 0.055 0.055 0.055" 
+          event-set__4="_event: mouseleave; scale: 0.05 0.05 0.05"
+          sound="on: click; src: #click-sound"
+          width="92"
+          height="165.75" 
+          position="-5.2 0 -5.5" 
+          rotation="0 45 0" 
+          scale=".05 .05 .05">
+          </a-image>
+      
+            <!-- 360-degree image. -->
+      <a-sky background-image="linear-gradient(to top, #dfe9f3 0%, white 100%)"></a-sky>
+      <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
+      <a-light type="ambient" color="#fff"></a-light>
+
+      <!-- Image links. -->
+      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
+      </a-entity>
+
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+        <a-cursor id="cursor"
+          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+          raycaster="objects: .link"></a-cursor>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
