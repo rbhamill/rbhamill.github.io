@@ -1,0 +1,106 @@
+ 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>G.R.A.C.E. (Graphically Rendered Artificial Conscious Educator)</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="https://npmcdn.com/aframe-href-component@0.5.1"></script>
+    <script src="components/set-image.js"></script>
+    <link rel="stylesheet" href="/stylesheet.css">
+  </head>
+  
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="gracesky" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FPANO_20170409_142751.jpg?1492211244038">
+        <img id="graceTag" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FGrace%20Drive.png?1491946251533">
+        <img id="graceNavA" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FGrace%20Header_Lessons.png?1491946248698">
+        <img id="graceNavB" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FGrace%20Header_Notes.png?1491946249956">
+        <img id="graceNoteA" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.25%20Copy.png?1492208693384">
+        <img id="graceNoteB" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.25%20Copy%203.png?1491946246726">
+        <img id="graceNoteC" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.25%20Copy%202.png?1491946246201">
+        <img id="graceNoteD" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.25%20Copy%205.png?1491946250443">
+        <img id="graceNoteE" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.25%20Copy%206.png?1492208695848">
+        <img id="graceArtA" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.5%20Article%20config%20Copy%202.png?1491946253671">
+        <img id="graceArtB" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.5%20Article%20config%20Copy.png?1491946250583">
+        <img id="graceArtC" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.5%20Article%20config.png?1491946253204">
+
+
+        <!-- Image link template to be reused. -->
+        <script id="link" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane"
+            material="shader: flat; src: #cubes-thumb"
+            event-set__1="_event: mousedown; scale: 1 1 1"
+            event-set__2="_event: mouseup; scale: 20 20 1"
+            event-set__3="_event: mouseenter; scale: 20 20 1"
+            event-set__4="_event: mouseleave; scale: 1 1 1"
+            sound="on: click; src: #click-sound">
+          </a-entity>
+        </script>
+      </a-assets>
+      
+      <a-entity class="link">
+        <a-image
+          src="#graceTag"
+          href="index.html"
+          event-set__1="_event: mousedown; scale: 0.055 0.055 0.055; src:" 
+          event-set__2="_event: mouseup; scale: .05 .05 .05" 
+          event-set__3="_event: mouseenter; rotation: 30 0 0" 
+          event-set__4="_event: mouseleave; rotation: 0 0 0" 
+          width="75"
+          height="21.25" 
+          position="0 2.6 -5.5" 
+          rotation="0 0 0" 
+          scale=".05 .05 .05">
+          </a-image>
+        <a-image id=".graceNavA" src="#graceNavA" width="116.5" height="10" position="-4.9 3.5 -5.5" rotation="30 45 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".graceNavB" src="#graceNavB" width="116.5" height="10" position="4.9 3.5 -5.5" rotation="30 -45 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".graceArtA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05"  src="#graceArtA" width="87.5" height="56.25" position="0 .7 -6.8" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".graceNoteB" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" class="my-image" src="#graceNoteB" width="87.5" height="25" position="4.7 1.4 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
+        </a-image> 
+        <a-image id=".graceNoteC" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceNoteC" width="87.5" height="25" position="4.7 -0.1 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".graceNoteD" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceNoteD" width="87.5" height="25" position="4.7 -1.6 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".graceNoteA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceNoteA" width="87.5" height="25" position="4.7 -3.1 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".graceNoteE" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceNoteE" width="87.5" height="25" position="0 -1.6 -6.8px" rotation="0 0 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".graceNoteF" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceNoteB" width="87.5" height="25" position="0 -3.1 -6.8px" rotation="0 0 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".graceArtB" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceArtB" width="87.5" height="56.25" position="-4.7 .7 -5.2px" rotation="0 45 0" scale=".05 .05 .05">
+        </a-image> 
+        <a-image id=".graceArtC" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceArtC" width="87.5" height="56.25" position="-4.7 -2.5 -5.2px" rotation="0 45 0" scale=".05 .05 .05">
+        </a-image>         
+      </a-entity>
+      
+      <!-- 360-degree image. -->
+      <a-sky id="image-360" src="#gracesky"></a-sky>
+      <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
+      <a-light type="ambient" color="#fff"></a-light>
+
+      <!-- Image links. -->
+      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
+      </a-entity>
+
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+        <a-cursor id="cursor"
+          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+          event-set__1="_event: mouseenter; color: white"
+          event-set__2="_event: mouseleave; color: black"
+          </a-cursor>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>

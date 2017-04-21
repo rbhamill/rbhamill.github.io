@@ -1,0 +1,96 @@
+ 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>N.A.T.E. (Neural Augmented Transmissions Expert)</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="https://npmcdn.com/aframe-href-component@0.5.1"></script>
+    <script src="components/set-image.js"></script>
+    <link rel="stylesheet" href="/stylesheet.css">
+  </head>
+  
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="natesky" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FPANO_20170409_144122.jpg?1492207259385">
+        <img id="nateTag" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FVirg%20drive.png?1492618867664">
+        <img id="nateNavA" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FVirg%20Notifications%20.png?1491946277768">
+        <img id="nateNavB" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FVirg%20favorited.png?1491946276878">
+        <img id="nateNoteA" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4%20%20Copy.png?1491946261385">
+        <img id="nateNoteB" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4%20%20Copy%203.png?1491946260986">
+        <img id="nateNoteC" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4%20%20Copy%202.png?1491946264696">
+        <img id="nateNoteD" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4%20.png?1491946264127">
+        <img id="nateArtA" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.5%20Article%20config%20Copy%202.png?1491946253671">
+        <img id="nateArtB" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.5%20Article%20config%20Copy.png?1491946250583">
+        <img id="nateArtC" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.5%20Article%20config.png?1491946253204">
+        <img id="nateWidgetA" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4%20Copy.png?1491946272100">
+        <img id="nateWidgetB" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4.png?1491946272505">
+
+
+        <!-- Image link template to be reused. -->
+        <script id="link" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane"
+            material="shader: flat; src: #cubes-thumb"
+            event-set__1="_event: mousedown; scale: 1 1 1"
+            event-set__2="_event: mouseup; scale: 20 20 1"
+            event-set__3="_event: mouseenter; scale: 20 20 1"
+            event-set__4="_event: mouseleave; scale: 1 1 1"
+            sound="on: click; src: #click-sound">
+          </a-entity>
+        </script>
+      </a-assets>
+      
+      <a-entity class="link">
+        <a-image id=".nateNav" href="index.html" event-set__1="_event: mousedown; scale: 0.055 0.055 0.055" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; rotation: 30 0 0" event-set__4="_event: mouseleave; rotation: 0 0 0" src="#nateTag" width="75" height="21.25" position="0 2.6 -5.5" rotation="0 0 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".nateNavA" src="#nateNavB" width="116.5" height="10" position="-4.9 3.5 -5.5" rotation="30 45 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".nateNavB" src="#nateNavA" width="116.5" height="10" position="4.9 3.5 -5.5" rotation="30 -45 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".nateNoteD" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05"  src="#nateNoteD" width="87.5" height="25" position="0 1.5 -6.6" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".nateWidgitA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05"   src="#nateWidgetA" width="87.5" height="87.5" position="-4.7 -1.7 -5.2" rotation="0 45 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".nateWidgitB" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05"   src="#nateWidgetB" width="87.5" height="87.5" position="0 -1.55 -6.6" scale=".05 .05 .05">
+        </a-image> 
+        <a-image id=".nateNoteB" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" class="my-image" src="#nateNoteB" width="87.5" height="25" position="4.7 1.4 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
+        </a-image> 
+        <a-image id=".nateNoteC" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteC" width="87.5" height="25" position="4.7 -0.1 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".nateNoteE" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteD" width="87.5" height="25" position="4.7 -1.6 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".nateNoteA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteA" width="87.5" height="25" position="4.7 -3.1 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
+        </a-image>
+        <a-image id=".nateNoteA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteA" width="87.5" height="25" position="-4.7 1.4 -5.2px" rotation="0 45 0" scale=".05 .05 .05">
+        </a-image>         
+      </a-entity>
+      
+      <!-- 360-degree image. -->
+      <a-sky id="image-360" radius="10" src="#natesky"></a-sky>
+      <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
+      <a-light type="ambient" color="#fff"></a-light>
+
+      <!-- Image links. -->
+      <a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
+      </a-entity>
+
+      <!-- Camera + cursor. -->
+      <a-entity camera look-controls>
+        <a-cursor id="cursor"
+          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+          event-set__1="_event: mouseenter; color: white"
+          event-set__2="_event: mouseleave; color: black"
+          fuse="true"
+          raycaster="objects: .link"></a-cursor>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
