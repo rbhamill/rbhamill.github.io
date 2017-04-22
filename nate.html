@@ -19,18 +19,20 @@
     <a-scene>
       <a-assets>
         <img id="natesky" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FPANO_20170409_144122.jpg?1492207259385">
-        <img id="nateTag" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FVirg%20drive.png?1492618867664">
-        <img id="nateNavA" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FVirg%20Notifications%20.png?1491946277768">
-        <img id="nateNavB" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FVirg%20favorited.png?1491946276878">
-        <img id="nateNoteA" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4%20%20Copy.png?1491946261385">
-        <img id="nateNoteB" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4%20%20Copy%203.png?1491946260986">
-        <img id="nateNoteC" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4%20%20Copy%202.png?1491946264696">
-        <img id="nateNoteD" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4%20.png?1491946264127">
-        <img id="nateArtA" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.5%20Article%20config%20Copy%202.png?1491946253671">
-        <img id="nateArtB" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.5%20Article%20config%20Copy.png?1491946250583">
-        <img id="nateArtC" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FEntry%20.5%20Article%20config.png?1491946253204">
-        <img id="nateWidgetA" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4%20Copy.png?1491946272100">
-        <img id="nateWidgetB" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2F4.png?1491946272505">
+        <img id="nateTag" crossorigin="anonymous" src="/assests/nate/nateTag.png">
+        <img id="nateNavA" crossorigin="anonymous" src="/assests/nate/nateNavL.png">
+        <img id="nateNavB" crossorigin="anonymous" src="/assests/nate/nateNavR.png">
+        <img id="nateNoteA" crossorigin="anonymous" src="/assests/nate/nateNoteA.png">
+        <img id="nateNoteB" crossorigin="anonymous" src="/assests/nate/nateNoteB.png">
+        <img id="nateNoteC" crossorigin="anonymous" src="/assests/nate/nateNoteC.png">
+        <img id="nateNoteD" crossorigin="anonymous" src="/assests/nate/nateNoteD.png">
+        <img id="nateNoteE" crossorigin="anonymous" src="/assests/nate/nateNoteE.png">
+        <img id="nateNoteF" crossorigin="anonymous" src="/assests/nate/nateNoteF.png">
+        <img id="nateArtA" crossorigin="anonymous" src="/assests/nate/nateArtA.png">
+        <img id="nateArtB" crossorigin="anonymous" src="/assests/nate/nateArtB.png">
+        <img id="nateArtC" crossorigin="anonymous" src="/assests/nate/nateArtC.png">
+        <img id="nateWidgetA" crossorigin="anonymous" src="/assests/nate/nateWidgetA.png">
+        <img id="nateWidgetB" crossorigin="anonymous" src="/assests/nate/nateWidgetB.png">
 
 
         <!-- Image link template to be reused. -->
@@ -50,25 +52,25 @@
       <a-entity class="link">
         <a-image id=".nateNav" href="index.html" event-set__1="_event: mousedown; scale: 0.055 0.055 0.055" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; rotation: 30 0 0" event-set__4="_event: mouseleave; rotation: 0 0 0" src="#nateTag" width="75" height="21.25" position="0 2.6 -5.5" rotation="0 0 0" scale=".05 .05 .05">
         </a-image>
-        <a-image id=".nateNavA" src="#nateNavB" width="116.5" height="10" position="-4.9 3.5 -5.5" rotation="30 45 0" scale=".05 .05 .05">
+        <a-image id=".nateNavA" src="#nateNavA" width="116.5" height="10" position="-4.9 3.5 -5.5" rotation="30 45 0" scale=".05 .05 .05">
         </a-image>
-        <a-image id=".nateNavB" src="#nateNavA" width="116.5" height="10" position="4.9 3.5 -5.5" rotation="30 -45 0" scale=".05 .05 .05">
+        <a-image id=".nateNavB" src="#nateNavB" width="116.5" height="10" position="4.9 3.5 -5.5" rotation="30 -45 0" scale=".05 .05 .05">
         </a-image>
-        <a-image id=".nateNoteD" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05"  src="#nateNoteD" width="87.5" height="25" position="0 1.5 -6.6" scale=".05 .05 .05">
+        <a-image id=".nateNoteA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05"  src="#nateNoteA" width="87.5" height="25" position="0 1.5 -6.6" scale=".05 .05 .05">
         </a-image>
         <a-image id=".nateWidgitA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05"   src="#nateWidgetA" width="87.5" height="87.5" position="-4.7 -1.7 -5.2" rotation="0 45 0" scale=".05 .05 .05">
         </a-image>
         <a-image id=".nateWidgitB" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05"   src="#nateWidgetB" width="87.5" height="87.5" position="0 -1.55 -6.6" scale=".05 .05 .05">
         </a-image> 
-        <a-image id=".nateNoteB" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" class="my-image" src="#nateNoteB" width="87.5" height="25" position="4.7 1.4 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
+        <a-image id=".nateNoteB" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteB" width="87.5" height="25" position="4.7 1.4 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
         </a-image> 
         <a-image id=".nateNoteC" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteC" width="87.5" height="25" position="4.7 -0.1 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
         </a-image>
-        <a-image id=".nateNoteE" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteD" width="87.5" height="25" position="4.7 -1.6 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
+        <a-image id=".nateNoteD" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteD" width="87.5" height="25" position="4.7 -1.6 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
         </a-image>
-        <a-image id=".nateNoteA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteA" width="87.5" height="25" position="4.7 -3.1 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
+        <a-image id=".nateNoteE" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteE" width="87.5" height="25" position="4.7 -3.1 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
         </a-image>
-        <a-image id=".nateNoteA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteA" width="87.5" height="25" position="-4.7 1.4 -5.2px" rotation="0 45 0" scale=".05 .05 .05">
+        <a-image id=".nateNoteF" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .06 .06 .06" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteF" width="87.5" height="25" position="-4.7 1.4 -5.2px" rotation="0 45 0" scale=".05 .05 .05">
         </a-image>         
       </a-entity>
       
