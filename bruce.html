@@ -17,6 +17,8 @@
   <body>
     <a-scene>
       <a-assets>
+        <audio id="bruceSeA" src="rbhamill.github.io/assets/sounds/bruceSE IN.mp3"></audio>
+        <audio id="bruceSeB" src="rbhamill.github.io/assets/sounds/bruceSE Out.mp3"></audio>
         <audio id="trackA" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FThundercat%20-%20'Captain%20Stupido'.mp3?1492549721474"></audio>
         <img id="brucesky" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FPANO_20170418_185827.jpg?1492638461282">
         <img id="bruceTag" crossorigin="anonymous" src="rbhamill.github.io/assets/bruce/brucetag.png">
@@ -47,7 +49,7 @@
       </a-assets>
       
       <a-entity class="link">
-        <a-image id=".bruceNav" href="index.html" event-set__1="_event: mousedown; scale: 0.055 0.055 0.055" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; rotation: 30 0 0" event-set__4="_event: mouseleave; rotation: 0 0 0" src="#bruceTag" width="75" height="21.25" position="0 2.6 -5.5" rotation="0 0 0" scale=".05 .05 .05">
+        <a-image id=".bruceNav" href="index.html" sound="on: click; src: #bruceSeB" event-set__1="_event: mousedown; scale: 0.055 0.055 0.055" event-set__2="_event: mouseup; scale: .05 .05 .05" event-set__3="_event: mouseenter; rotation: 30 0 0" event-set__4="_event: mouseleave; rotation: 0 0 0" src="#bruceTag" width="75" height="21.25" position="0 2.6 -5.5" rotation="0 0 0" scale=".05 .05 .05">
         </a-image>
         <a-image id=".bruceNavA" src="#bruceNavA" width="116.5" height="10" position="-4.9 3.5 -5.5" rotation="30 45 0" scale=".05 .05 .05">
         </a-image>
@@ -68,7 +70,8 @@
         <a-image id=".bruceArtA" sound="on: click; src: #trackA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#bruceArtA" width="87.5" height="56.25" position="-4.7 .7 -5.2px" rotation="0 45 0" scale=".05 .05 .05">
         </a-image> 
         <a-image id=".bruceArtB" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#bruceArtB" width="87.5" height="56.25" position="-4.7 -2.5 -5.2px" rotation="0 45 0" scale=".05 .05 .05">
-        </a-image>         
+        </a-image> 
+        <a-entity sound="autoplay: true; src: #bruceSeA;"></a-entity>        
       </a-entity>
       
       <!-- sound -->

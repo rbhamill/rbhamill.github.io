@@ -17,6 +17,8 @@
   <body>
     <a-scene>
       <a-assets>
+        <audio id="graceSeA" src="rbhamill.github.io/assets/sounds/graceSE IN.mp3"></audio>
+        <audio id="graceSeB" src="rbhamill.github.io/assets/sounds/graceSE OUT.mp3"></audio>
         <img id="gracesky" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FPANO_20170409_142751.jpg?1492211244038">
         <img id="graceTag" crossorigin="anonymous" src="rbhamill.github.io/assets/grace/graceTag.png">
         <img id="graceNavA" crossorigin="anonymous" src="rbhamill.github.io/assets/grace/graceNavL.png">
@@ -50,6 +52,7 @@
         <a-image
           src="#graceTag"
           href="index.html"
+          sound="on: click; src: #graceSeB"
           event-set__1="_event: mousedown; scale: 0.055 0.055 0.055; src:" 
           event-set__2="_event: mouseup; scale: .05 .05 .05" 
           event-set__3="_event: mouseenter; rotation: 30 0 0" 
@@ -81,7 +84,8 @@
         <a-image id=".graceArtB" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceArtB" width="87.5" height="56.25" position="-4.7 .7 -5.2px" rotation="0 45 0" scale=".05 .05 .05">
         </a-image> 
         <a-image id=".graceArtC" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceArtC" width="87.5" height="56.25" position="-4.7 -2.5 -5.2px" rotation="0 45 0" scale=".05 .05 .05">
-        </a-image>         
+        </a-image> 
+        <a-entity sound="autoplay: true; src: #graceSeA;"></a-entity>        
       </a-entity>
       
       <!-- 360-degree image. -->
