@@ -17,9 +17,10 @@
   <body>
     <a-scene>
       <a-assets>
-        <audio id="graceSeA" src="rbhamill.github.io/assets/sounds/graceSE IN.mp3"></audio>
-        <audio id="graceSeB" src="rbhamill.github.io/assets/sounds/graceSE OUT.mp3"></audio>
-        <img id="gracesky" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FPANO_20170409_142751.jpg?1492211244038">
+        <audio id="graceIntro" src="rbhamill.github.io/assets/sounds/GraceIntro.wav"></audio>
+        <audio id="graceLesson" src="rbhamill.github.io/assets/sounds/GraceLesson.wav"></audio>
+        <audio id="graceAppointment" src="rbhamill.github.io/assets/sounds/GraceAppointment.wav"></audio>
+        <img id="gracesky" crossorigin="anonymous" src="rbhamill.github.io/assets/sky/graceSky.jpg">
         <img id="graceTag" crossorigin="anonymous" src="rbhamill.github.io/assets/grace/graceTag.png">
         <img id="graceNavA" crossorigin="anonymous" src="rbhamill.github.io/assets/grace/graceNavL.png">
         <img id="graceNavB" crossorigin="anonymous" src="rbhamill.github.io/assets/grace/graceNavR.png">
@@ -52,10 +53,10 @@
         <a-image
           src="#graceTag"
           href="index.html"
-          sound="on: click; src: #graceSeB"
+          sound="on: hover; src: #graceSeB"
           event-set__1="_event: mousedown; scale: 0.055 0.055 0.055; src:" 
           event-set__2="_event: mouseup; scale: .05 .05 .05" 
-          event-set__3="_event: mouseenter; rotation: 30 0 0" 
+          event-set__3="_event: mouseenter; rotation: 30 0 0;" 
           event-set__4="_event: mouseleave; rotation: 0 0 0" 
           width="75"
           height="21.25" 
@@ -67,7 +68,7 @@
         </a-image>
         <a-image id=".graceNavB" src="#graceNavB" width="116.5" height="10" position="4.9 3.5 -5.5" rotation="30 -45 0" scale=".05 .05 .05">
         </a-image>
-        <a-image id=".graceArtA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05"  src="#graceArtA" width="87.5" height="56.25" position="0 .7 -6.8" scale=".05 .05 .05">
+        <a-image id=".graceArtA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05"  src="#graceArtA" width="87.5" height="56.25" position="0 .7 -6.8" scale=".05 .05 .05" sound="on: click; src: #graceLesson">
         </a-image>
         <a-image id=".graceNoteC" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceNoteC" width="87.5" height="25" position="4.7 1.4 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
         </a-image> 
@@ -77,7 +78,7 @@
         </a-image>
         <a-image id=".graceNoteF" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceNoteF" width="87.5" height="25" position="4.7 -3.1 -5.2px" rotation="0 -45 0" scale=".05 .05 .05">
         </a-image>
-        <a-image id=".graceNoteA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceNoteA" width="87.5" height="25" position="0 -1.6 -6.8px" rotation="0 0 0" scale=".05 .05 .05">
+        <a-image id=".graceNoteA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceNoteA" width="87.5" height="25" position="0 -1.6 -6.8px" rotation="0 0 0" scale=".05 .05 .05" sound="on: click; src: #graceAppointment">
         </a-image>
         <a-image id=".graceNoteB" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceNoteB" width="87.5" height="25" position="0 -3.1 -6.8px" rotation="0 0 0" scale=".05 .05 .05">
         </a-image>
@@ -85,7 +86,7 @@
         </a-image> 
         <a-image id=".graceArtC" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#graceArtC" width="87.5" height="56.25" position="-4.7 -2.5 -5.2px" rotation="0 45 0" scale=".05 .05 .05">
         </a-image> 
-        <a-entity sound="autoplay: true; src: #graceSeA;"></a-entity>        
+        <a-entity sound="autoplay: true; src: #graceIntro;"></a-entity>        
       </a-entity>
       
       <!-- 360-degree image. -->

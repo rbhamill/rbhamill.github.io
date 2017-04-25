@@ -17,9 +17,9 @@
   <body>
     <a-scene>
       <a-assets>
-        <audio id="nateSeA" src="rbhamill.github.io/assets/sounds/nateSE IN.mp3"></audio>
-        <audio id="nateSeB" src="rbhamill.github.io/assets/sounds/nateSE Out.mp3"></audio>
-        <img id="natesky" crossorigin="anonymous" src="https://cdn.glitch.com/2ea1288f-b784-4633-ba9d-4c67db0bbf9a%2FPANO_20170409_144122.jpg?1492207259385">
+        <audio id="nateIntro" src="rbhamill.github.io/assets/sounds/NateIntro.wav"></audio>
+        <audio id="nateMessage" src="rbhamill.github.io/assets/sounds/NateMessage.wav"></audio>
+        <img id="natesky" crossorigin="anonymous" src="rbhamill.github.io/assets/sky/nateSky.jpg">
         <img id="nateTag" crossorigin="anonymous" src="rbhamill.github.io/assets/nate/nateTag.png">
         <img id="nateNavA" crossorigin="anonymous" src="rbhamill.github.io/assets/nate/nateNavL.png">
         <img id="nateNavB" crossorigin="anonymous" src="rbhamill.github.io/assets/nate/nateNavR.png">
@@ -59,7 +59,7 @@
         </a-image>
         <a-image id=".nateNoteA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05"  src="#nateNoteA" width="87.5" height="25" position="0 1.5 -6.6" scale=".05 .05 .05">
         </a-image>
-        <a-image id=".nateWidgitA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05"   src="#nateWidgetA" width="87.5" height="87.5" position="-4.7 -1.7 -5.2" rotation="0 45 0" scale=".05 .05 .05">
+        <a-image id=".nateWidgitA" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05"   src="#nateWidgetA" width="87.5" height="87.5" position="-4.7 -1.7 -5.2" rotation="0 45 0" scale=".05 .05 .05" sound="on: click; src: #nateMessage">
         </a-image>
         <a-image id=".nateWidgitB" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05"   src="#nateWidgetB" width="87.5" height="87.5" position="0 -1.55 -6.6" scale=".05 .05 .05">
         </a-image> 
@@ -73,7 +73,7 @@
         </a-image>
         <a-image id=".nateNoteF" event-set__1="_event: mousedown; scale: 0.05 0.05 0.05" event-set__2="_event: mouseup; scale: .055 .055 .055" event-set__3="_event: mouseenter; scale: .055 .055 .055" event-set__4="_event: mouseleave; scale: .05 .05 0.05" src="#nateNoteF" width="87.5" height="25" position="-4.7 1.4 -5.2px" rotation="0 45 0" scale=".05 .05 .05">
         </a-image> 
-        <a-entity sound="autoplay: true; src: #nateSeA;"></a-entity>        
+        <a-entity sound="autoplay: true; src: #nateIntro"></a-entity>        
       </a-entity>
       
       <!-- 360-degree image. -->
